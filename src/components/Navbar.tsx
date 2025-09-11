@@ -1,6 +1,6 @@
 const Navbar = () => {
     return (
-        <nav className="py-3 px-[6%] bg-accent">
+        <nav className="py-3 px-[6%] bg-accentCustom">
             <ul className="flex flex-row justify-between text-white font-medium">
                 <li>Career Letter</li>
                 <ul className="flex flex-row gap-4">
