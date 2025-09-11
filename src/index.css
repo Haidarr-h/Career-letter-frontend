@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+    /* Color */
+    --color-primary: #F7F4EA;
+    --color-secondary: #EBD9D1;
+    --color-accent: #A8BBA3;
+
+    /* font */
+    --font-faculty: "Faculty Glyphic", sans-serif;
+}
+
+* {
+    font-family: var(--font-faculty);
+}
