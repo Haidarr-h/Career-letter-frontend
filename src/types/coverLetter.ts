@@ -31,7 +31,7 @@ export interface CoverLetterFormProps {
   additional_request: string | null;
   setadditional_request: (additional_request: string | null) => void;
   loading: boolean;
-  onSubmit: () => void;
+  onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }
 
 export interface CoverLetterResultProps {

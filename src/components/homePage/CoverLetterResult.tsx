@@ -5,7 +5,6 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
@@ -34,7 +33,7 @@ const CoverLetterResult: React.FC<CoverLetterResultProps> = ({
   const [type, setType] = useState<"word" | "pdf" | null>(null);
   const [showAlert, setShowAlert] = useState(false);
 
-  const { downloading, error, download } = useDownloadCoverLetter();
+  const { downloading, download } = useDownloadCoverLetter();
 
   const handleDownload = () => {
     download({
@@ -83,7 +82,7 @@ const CoverLetterResult: React.FC<CoverLetterResultProps> = ({
 
           <Button className="min-w-[100px] cursor-pointer">
             <Dialog>
-              <DialogTrigger className="cursor-pointer" onClick={(e) => setType(null)}>Download</DialogTrigger>
+              <DialogTrigger className="cursor-pointer" onClick={() => setType(null)}>Download</DialogTrigger>
               <DialogContent>
                 <DialogTitle>Downloading AI Generated Cover Letter</DialogTitle>
                 <DialogDescription>

@@ -11,8 +11,8 @@ const Home = () => {
     const [cvFile, setCvFile] = useState<File | null>(null)
     const [jobDesc, setJobDesc] = useState("")
     const [tone, setTone] = useState("formal")
-    const [company_name_address, setCompany_name_address] = useState<string | undefined>(undefined)
-    const [additional_request, setadditional_request] = useState<string | undefined>(undefined)
+    const [company_name_address, setCompany_name_address] = useState<string | null>(null)
+    const [additional_request, setadditional_request] = useState<string | null>(null)
     const [showError, setShowError] = useState<string | null>(null);
 
 
@@ -37,7 +37,7 @@ const Home = () => {
     }, [error])
 
     const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault()
+        e.preventDefault();
         if (!cvFile) return alert("Upload Your CV")
         submit({ file_cv: cvFile, job_description: jobDesc, tone: tone, company_name_address: company_name_address || undefined, additional_request: additional_request || undefined })
     }
@@ -65,7 +65,7 @@ const Home = () => {
                 <CoverLetterResult
                     result={result}
                     onBack={() => setView("form")}
-                    onRegenerate={handleSubmit}
+                    onRegenerate={() => handleSubmit(new Event("submit") as unknown as React.FormEvent)}
                 />
             )}
 

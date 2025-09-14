@@ -12,8 +12,6 @@ const CoverLetterForm: React.FC<CoverLetterFormProps> = ({
   setCvFile,
   jobDesc,
   setJobDesc,
-  tone,
-  setTone,
   company_name_address,
   setCompany_name_address,
   additional_request,
