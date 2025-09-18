@@ -61,7 +61,6 @@ const CoverLetterForm: React.FC<CoverLetterFormProps> = ({
                   value={company_name_address || ""}
                   placeholder="Career L Corporation in Banana Street, New York, USA"
                   onChange={(e) => setCompany_name_address(e.target.value || null)}
-                  required
                 />
               </div>
 
